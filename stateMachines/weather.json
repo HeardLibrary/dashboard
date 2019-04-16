@@ -1,18 +1,18 @@
 {
-  "Comment": "Flow is started by a daily CRON job",
-  "StartAt": "accuweatherApi",
-  "States": {
-    "accuweatherApi": {
-        "Type": "Task",
-        "Resource": "arn:aws:lambda:us-east-2:555751041262:function:weather_viz",
-        "ResultPath": "$",
-        "Next": "writeDatabase"
-        },
-    "writeDatabase": {
-        "Type": "Task",
-        "Resource": "arn:aws:lambda:us-east-2:555751041262:function:weather_db",
-        "ResultPath": "$",
-        "End": true
-        }
-    }
-}
+    "Comment": "Flow is started by a daily CRON job at 04:59 UTC = 11:59 PM CDT",
+    "StartAt": "accuweatherApi",
+    "States": {
+      "accuweatherApi": {
+          "Type": "Task",
+          "Resource": "arn:aws:lambda:us-east-2:555751041262:function:weather_viz",
+          "ResultPath": "$",
+          "Next": "writeDatabase"
+          },
+      "writeDatabase": {
+          "Type": "Task",
+          "Resource": "arn:aws:lambda:us-east-2:555751041262:function:weather_db",
+          "ResultPath": "$",
+          "End": true
+          }
+      }
+  }
