@@ -7,7 +7,7 @@ import pytz
 
 def lambda_handler(event, context):
     locationString = '16133_PC' # Pleasant View, TN 37146
-    apiKey = 'oGvDaLfsclkNGva8UoAV11WbAlQpq0N8'
+    apiKey = 'paste_in_here'
     url = 'http://dataservice.accuweather.com/currentconditions/v1/' + locationString
     r = requests.get(url, params={'apikey': apiKey, 'details': 'true'})
     data = r.json()
