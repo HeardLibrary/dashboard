@@ -47,3 +47,19 @@ aws lambda create-function --region us-east-2 --function-name bokeh --zip-file f
 However, it was too big to edit online and it failed with no real way for me to troubleshoot.  
 
 However, some of the dependencies like numpy are now part of the AWS standard library.  I found one example of somebody actually trying to use Bokeh: https://stackoverflow.com/questions/54542060/aws-lambda-layer-for-bokeh .  It involved using AWS "layers", which is apparently a new thing.  See this post: https://medium.com/@qtangs/creating-new-aws-lambda-layer-for-python-pandas-library-348b126e9f3e for more on that.  Unfortunately, I haven't seen that anybody has already created a layer for Bokeh: https://github.com/mthenw/awesome-layers .  It looks like I might be able to follow the first StackOverflow to build the layer, or maybe install Bokeh by creating a zip that doesn't include all of the dependencies.  
+
+Did that - it was pretty simple.  I just created the 'requirements.txt' file, then ran the get_layer_packages.sh shell script to created the layer. Packaged the "python" directory as a .zip file.  
+
+I then followed the directions under "Managing Layers" at https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html .  I used the command
+
+```
+aws lambda publish-layer-version --layer-name bokeh-layer --description "Bokeh layer" --license-info "MIT" \
+--content S3Bucket=baskauf-bokeh,S3Key=python.zip --compatible-runtimes python3.6
+```
+
+The creation was successful and I got this result:
+```
+"LayerArn": "arn:aws:lambda:us-east-2:555751041262:layer:bokeh-layer"
+"LayerVersionArn": "arn:aws:lambda:us-east-2:555751041262:layer:bokeh-layer:1"
+"Description": "Bokeh layer"
+```
