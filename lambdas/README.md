@@ -8,6 +8,12 @@ The lambdas themselves have .py extensions.
 
 The lambdas must be packaged in .zip files before being uploaded.  Those zip files are stored in the zips subdirectory.  If the Python script requires any modules that aren't included by default in the AWS system, they need to be downloaded and included in the zip.
 
+Here's the command to download a module ("requests") using PIP to the `~/temp` directory:
+
+```
+pip install requests -t ~/temp
+```
+
 Corresponding files with .sh extensions are shell scripts that contain the AWS CLI (command line interface) commands to upload the zip files to the user's AWS account.  Here's an example CLI command:
 
 ```
