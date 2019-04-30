@@ -1,4 +1,4 @@
-# Notes on failed test to deploy Bokeh in an AWS lambda 2019-04-29
+# Notes on test to deploy Bokeh in an AWS lambda 2019-04-30
 
 ## Bokeh quickstart
 
@@ -192,7 +192,7 @@ http://baskauf-bokeh.s3-website.us-east-2.amazonaws.com/plot.html
 
 However, when I re-ran the file, the content type got changed back again and the browser downloaded the file instead of displaying it.  I fixed this by adding a parameter `, ContentType='text/html'` to the `.put_object()` method.
 
-## Trigger the Lambda on DynamoDB MODIFY event
+## Getting the data from a database table scan
 
 To retrieve all items from a DynamoDB table, use the .scan() method. Using it with no attributes produces JSON like this:
 
