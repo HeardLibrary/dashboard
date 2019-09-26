@@ -2,9 +2,13 @@ from pathlib import Path
 from github import Github
 import requests
 
-# the access token was generated for read/write access to public repos
+# the access token should be generated for read/write access to public repos
 # see https://developer.github.com/v3/auth/#working-with-two-factor-authentication
-# see https://github.com/settings/tokens/new select public_repo
+# see https://github.com/settings/tokens/new
+# select public_repo
+
+# reference on PyGithub: https://pygithub.readthedocs.io/en/latest/github_objects/Repository.html
+# reference on GitHub API: https://developer.github.com/v3/guides/getting-started/
 
 def loadCredential(filename):
     cred = ''
@@ -22,7 +26,6 @@ def loginGetRepo(repoName, githubUsername):
         token = loadCredential('token.txt')
         g = Github(login_or_token = token)
     else:
-        # neet to test this on a repo without 2 factor authentication
         pwd = loadCredential('pwd.txt')
         g = Github(githubUsername, pwd)
     user = g.get_user()
@@ -53,23 +56,23 @@ githubUsername = ''  # set to empty string if using a token
 repoOwner = 'baskauf'
 repoName = 'practice'
 
-filename = 'test1.txt'
+filename = 'test2.txt'
 path = filename # need to modify file name if not in the root directory
-commitMessage = 'Modify another test file'
-content = '''This is Tomys repository.
-This is his second test file.
-He is now changing it.'''
+commitMessage = 'File created via API'
+content = '''This is new file content.
+Second line.'''
 
 # script starts here
 repo = loginGetRepo("practice", githubUsername)
 print(getUserList(repo))
 
-
-#response = repo.create_file(path, commitMessage, content)
+response = repo.create_file(path, commitMessage, content)
 
 #response = updateFile(repoOwner, repoName, path, commitMessage, content)
 #response = repo.update_file(path, commitMessage, content, sha)
-#print(response)
 
-#repo.add_to_collaborators('baskaufs','push')
-#repo.remove_from_collaborators('baskaufs')
+#response = repo.add_to_collaborators('baskaufs','push')
+#response = repo.remove_from_collaborators('baskaufs')
+print(response)
+
+
