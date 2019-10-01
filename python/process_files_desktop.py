@@ -87,6 +87,7 @@ def readDict(filename):
     fileObject.close()
     return array
 
+# ***********************************************************
 # set variable values
 githubUsername = ''  # set to empty string if using a token (for 2FA)
 organizationName = 'heardlibrary'
@@ -101,8 +102,7 @@ repo = loginGetRepo(repoName, githubUsername, organizationName)
 print(getUserList(repo))
 
 # Read in a CSV
-inputFilename = '../data/collections.csv'
-outputFilename = '../data/collections.json'
+inputFilename = filenameRoot + '.csv'
 tableData = readCsv(inputFilename) # not used yet, but in future when CSV is edited by script
 rawCsvText = readRawCsv(inputFilename)
 dictData = readDict(inputFilename)
@@ -111,12 +111,14 @@ dictData = readDict(inputFilename)
 content = json.dumps(dictData)
 filename = filenameRoot + '.json'
 '''
+outputFilename = '../data/collections.json'
 with open(outputFilename, 'wt', encoding='utf-8') as fileObject:
     fileObject.write(content)
 '''
 path = pathToDirectory + filename
-commitMessage = 'Update JSON file via API'
+commitMessage = 'Update ' + filenameRoot + ' JSON file via API'
 response = updateFile(organizationName, repoName, path, commitMessage, content)
+print(response)
 
 # Write CSV file. The text is just dumped as it was read in from the local file.
 filename = filenameRoot + '.csv'
@@ -125,7 +127,7 @@ with open(filename, 'wt', encoding='utf-8') as fileObject:
     fileObject.write(rawCsvText)
 '''
 path = pathToDirectory + filename
-commitMessage = 'Update CSV file via API'
+commitMessage = 'Update ' + filenameRoot + ' CSV file via API'
 response = updateFile(organizationName, repoName, path, commitMessage, rawCsvText)
 
 # These commented out lines can be uncommented to perform various operations on the repo
