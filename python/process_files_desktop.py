@@ -23,15 +23,25 @@ def loadCredential(filename):
         exit()
     return(cred)
 
-def loginGetRepo(repoName, githubUsername):
+def loginGetRepo(repoName, githubUsername, organizationName):
     if githubUsername == '':
         token = loadCredential('token.txt')
         g = Github(login_or_token = token)
     else:
         pwd = loadCredential('pwd.txt')
         g = Github(githubUsername, pwd)
+    
+    # to access a user's repo instead of an organizational one, use the following code:
+    # In this case, the value of organizationName is not used and can have any value.
+    '''
     user = g.get_user()
     repo = user.get_repo(repoName)
+    '''
+
+    # this is the method to create an instance of a repo in an organization to which the token
+    # creator has push access
+    organization = g.get_organization(organizationName)
+    repo = organization.get_repo(repoName)
     return(repo)
 
 def getUserList(repo):
@@ -41,16 +51,18 @@ def getUserList(repo):
         personList.append(person.login)
     return personList
 
-def getFileSha(owner, repo, filePath):
+def getFileSha(account, repo, filePath):
     # get the data about the file to get its blob SHA
-    r = requests.get('https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + filePath)
+    r = requests.get('https://api.github.com/repos/' + account + '/' + repo + '/contents/' + filePath)
     fileData = r.json()
     sha = fileData['sha']
     return sha
 
-def updateFile(repoOwner, repoName, path, commitMessage, content):
-    sha = getFileSha(repoOwner, repoName, path)
+# use this function to update an existing text file
+def updateFile(account, repoName, path, commitMessage, content):
+    sha = getFileSha(account, repoName, path)
     response = repo.update_file(path, commitMessage, content, sha)
+    return response
 
 def readCsv(filename):
     fileObject = open(filename, 'r', newline='', encoding='utf-8')
@@ -60,6 +72,11 @@ def readCsv(filename):
         array.append(row)
     fileObject.close()
     return array
+
+def readRawCsv(filename):
+    with open(filename, 'rt', encoding='utf-8') as fileObject:
+        text = fileObject.read()
+        return text
 
 def readDict(filename):
     fileObject = open(filename, 'r', newline='', encoding='utf-8')
@@ -71,42 +88,51 @@ def readDict(filename):
     return array
 
 # set variable values
-githubUsername = ''  # set to empty string if using a token
-repoOwner = 'baskauf'
-repoName = 'practice'
-
-filename = 'test2.txt'
-path = filename # need to modify file name if not in the root directory
-commitMessage = 'File created via API'
-content = '''This is new file content.
-Second line.'''
+githubUsername = ''  # set to empty string if using a token (for 2FA)
+organizationName = 'heardlibrary'
+repoName = 'dashboard'
+filenameRoot = 'collections'
+pathToDirectory = 'data/'
 
 # script starts here
 
 # This is just to produce something that shows the connection with the repo is successful
-repo = loginGetRepo("practice", githubUsername)
+repo = loginGetRepo(repoName, githubUsername, organizationName)
 print(getUserList(repo))
 
-# Test of reading in a CSV
+# Read in a CSV
 inputFilename = '../data/collections.csv'
 outputFilename = '../data/collections.json'
-tableData = readCsv(inputFilename)
+tableData = readCsv(inputFilename) # not used yet, but in future when CSV is edited by script
+rawCsvText = readRawCsv(inputFilename)
 dictData = readDict(inputFilename)
 
-# Test of writing JSON converted from the CSV
-json = json.dumps(dictData)
-print(json)
+# Write JSON converted from the CSV
+content = json.dumps(dictData)
+filename = filenameRoot + '.json'
+'''
 with open(outputFilename, 'wt', encoding='utf-8') as fileObject:
-    fileObject.write(json)
+    fileObject.write(content)
+'''
+path = pathToDirectory + filename
+commitMessage = 'Update JSON file via API'
+response = updateFile(organizationName, repoName, path, commitMessage, content)
+
+# Write CSV file. The text is just dumped as it was read in from the local file.
+filename = filenameRoot + '.csv'
+'''
+with open(filename, 'wt', encoding='utf-8') as fileObject:
+    fileObject.write(rawCsvText)
+'''
+path = pathToDirectory + filename
+commitMessage = 'Update CSV file via API'
+response = updateFile(organizationName, repoName, path, commitMessage, rawCsvText)
 
 # These commented out lines can be uncommented to perform various operations on the repo
 #response = repo.create_file(path, commitMessage, content)
 
-#response = updateFile(repoOwner, repoName, path, commitMessage, content)
-#response = repo.update_file(path, commitMessage, content, sha)
-
-#response = repo.add_to_collaborators('baskaufs','push')
-#response = repo.remove_from_collaborators('baskaufs')
-#print(response)
+#response = repo.add_to_collaborators('username','push')
+#response = repo.remove_from_collaborators('username')
+print(response)
 
 
