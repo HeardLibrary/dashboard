@@ -1,6 +1,8 @@
 from pathlib import Path
 from github import Github
 import requests
+import csv
+import json
 
 # the access token should be generated for read/write access to public repos
 # see https://developer.github.com/v3/auth/#working-with-two-factor-authentication
@@ -50,6 +52,23 @@ def updateFile(repoOwner, repoName, path, commitMessage, content):
     sha = getFileSha(repoOwner, repoName, path)
     response = repo.update_file(path, commitMessage, content, sha)
 
+def readCsv(filename):
+    fileObject = open(filename, 'r', newline='', encoding='utf-8')
+    readerObject = csv.reader(fileObject)
+    array = []
+    for row in readerObject:
+        array.append(row)
+    fileObject.close()
+    return array
+
+def readDict(filename):
+    fileObject = open(filename, 'r', newline='', encoding='utf-8')
+    dictObject = csv.DictReader(fileObject)
+    array = []
+    for row in dictObject:
+        array.append(row)
+    fileObject.close()
+    return array
 
 # set variable values
 githubUsername = ''  # set to empty string if using a token
@@ -63,16 +82,31 @@ content = '''This is new file content.
 Second line.'''
 
 # script starts here
+
+# This is just to produce something that shows the connection with the repo is successful
 repo = loginGetRepo("practice", githubUsername)
 print(getUserList(repo))
 
-response = repo.create_file(path, commitMessage, content)
+# Test of reading in a CSV
+inputFilename = '../data/collections.csv'
+outputFilename = '../data/collections.json'
+tableData = readCsv(inputFilename)
+dictData = readDict(inputFilename)
+
+# Test of writing JSON converted from the CSV
+json = json.dumps(dictData)
+print(json)
+with open(outputFilename, 'wt', encoding='utf-8') as fileObject:
+    fileObject.write(json)
+
+# These commented out lines can be uncommented to perform various operations on the repo
+#response = repo.create_file(path, commitMessage, content)
 
 #response = updateFile(repoOwner, repoName, path, commitMessage, content)
 #response = repo.update_file(path, commitMessage, content, sha)
 
 #response = repo.add_to_collaborators('baskaufs','push')
 #response = repo.remove_from_collaborators('baskaufs')
-print(response)
+#print(response)
 
 
