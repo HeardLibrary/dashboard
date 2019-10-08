@@ -14,12 +14,19 @@ import json
 
 def loadCredential(filename):
     cred = ''
+    # to change the script to look for the credential in the working directory, change the value of home to empty string
     home = str(Path.home()) #gets path to home directory; supposed to work for Win and Mac
+    if home == '':
+        credentialPath = filename
+        place = 'working'
+    else:
+        credentialPath = home + '/' + filename
+        place = 'home'
     try:
-        with open(home + '/' + filename, 'rt', encoding='utf-8') as fileObject:
+        with open(credentialPath, 'rt', encoding='utf-8') as fileObject:
             cred = fileObject.read()
     except:
-        print(filename + ' file not found - is it in your home directory?')
+        print(filename + ' file not found - is it in your ' + place + ' directory?')
         exit()
     return(cred)
 
