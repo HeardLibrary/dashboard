@@ -72,6 +72,12 @@ def updateFile(account, repoName, path, commitMessage, content):
     response = repo.update_file(path, commitMessage, content, sha)
     return response
 
+def readFilenames():
+    with open('filenames.txt', 'rt', encoding='utf-8') as fileObject:
+        text = fileObject.read()
+        fileList = text.strip().split('\n')
+        return fileList    
+
 def readCsv(filename):
     fileObject = open(filename, 'r', newline='', encoding='utf-8')
     readerObject = csv.reader(fileObject)
@@ -110,40 +116,38 @@ pathToDirectory = 'data/'
 repo = loginGetRepo(repoName, githubUsername, organizationName, credDirectory)
 print(getUserList(repo))
 
-# Read in a CSV
-inputFilename = filenameRoot + '.csv'
-tableData = readCsv(inputFilename) # not used yet, but in future when CSV is edited by script
-rawCsvText = readRawCsv(inputFilename)
-dictData = readDict(inputFilename)
+# Get the list of filename roots
+filenames = readFilenames()
+for filenameRoot in filenames:
+    try:
+        # Read in a CSV
+        inputFilename = filenameRoot + '.csv'
+        tableData = readCsv(inputFilename) # not used yet, but in future when CSV is edited by script
+        rawCsvText = readRawCsv(inputFilename)
+        dictData = readDict(inputFilename)
 
-# Write JSON converted from the CSV
-content = json.dumps(dictData)
-filename = filenameRoot + '.json'
-'''
-outputFilename = '../data/collections.json'
-with open(outputFilename, 'wt', encoding='utf-8') as fileObject:
-    fileObject.write(content)
-'''
-path = pathToDirectory + filename
-commitMessage = 'Update ' + filenameRoot + ' JSON file via API'
-response = updateFile(organizationName, repoName, path, commitMessage, content)
-print(response)
+        # Write JSON converted from the CSV
+        content = json.dumps(dictData)
+        filename = filenameRoot + '.json'
+        path = pathToDirectory + filename
+        commitMessage = 'Update ' + filenameRoot + ' JSON file via API'
+        response = updateFile(organizationName, repoName, path, commitMessage, content)
+        print(response)
 
-# Write CSV file. The text is just dumped as it was read in from the local file.
-filename = filenameRoot + '.csv'
-'''
-with open(filename, 'wt', encoding='utf-8') as fileObject:
-    fileObject.write(rawCsvText)
-'''
-path = pathToDirectory + filename
-commitMessage = 'Update ' + filenameRoot + ' CSV file via API'
-response = updateFile(organizationName, repoName, path, commitMessage, rawCsvText)
+        # Write CSV file. The text is just dumped as it was read in from the local file.
+        filename = filenameRoot + '.csv'
+        path = pathToDirectory + filename
+        commitMessage = 'Update ' + filenameRoot + ' CSV file via API'
+        response = updateFile(organizationName, repoName, path, commitMessage, rawCsvText)
+    except:
+        print("Couldn't find the source CSV file for " + filenameRoot)
+
+
 
 # These commented out lines can be uncommented to perform various operations on the repo
 #response = repo.create_file(path, commitMessage, content)
 
 #response = repo.add_to_collaborators('username','push')
 #response = repo.remove_from_collaborators('username')
-print(response)
-
+#print(response)
 
