@@ -63,13 +63,21 @@ def getFileSha(account, repo, filePath):
     # get the data about the file to get its blob SHA
     r = requests.get('https://api.github.com/repos/' + account + '/' + repo + '/contents/' + filePath)
     fileData = r.json()
-    sha = fileData['sha']
+    print(fileData)
+    try:
+        sha = fileData['sha']
+    except:
+        # if the file doesn't already exist on GitHub, no sha will be returned
+        sha = ''
     return sha
 
 # use this function to update an existing text file
 def updateFile(account, repoName, path, commitMessage, content):
     sha = getFileSha(account, repoName, path)
-    response = repo.update_file(path, commitMessage, content, sha)
+    if sha == '':
+        response = repo.create_file(path, commitMessage, content)
+    else:
+        response = repo.update_file(path, commitMessage, content, sha)
     return response
 
 def readFilenames():
@@ -107,7 +115,6 @@ githubUsername = ''  # set to empty string if using a token (for 2FA)
 organizationName = 'heardlibrary'  # set to empty string if the repo belongs to the token issuer
 repoName = 'dashboard'
 credDirectory = 'home' # set to 'home' if the credential is in the home directory, otherwise working directory
-filenameRoot = 'collections'
 pathToDirectory = 'data/'
 
 # script starts here
@@ -119,13 +126,19 @@ print(getUserList(repo))
 # Get the list of filename roots
 filenames = readFilenames()
 for filenameRoot in filenames:
+    fileFound = True
     try:
         # Read in a CSV
         inputFilename = filenameRoot + '.csv'
         tableData = readCsv(inputFilename) # not used yet, but in future when CSV is edited by script
         rawCsvText = readRawCsv(inputFilename)
         dictData = readDict(inputFilename)
-
+    
+    except Exception as e:
+        fileFound = False
+        print(str(e))
+    
+    if fileFound:
         # Write JSON converted from the CSV
         content = json.dumps(dictData)
         filename = filenameRoot + '.json'
@@ -139,10 +152,7 @@ for filenameRoot in filenames:
         path = pathToDirectory + filename
         commitMessage = 'Update ' + filenameRoot + ' CSV file via API'
         response = updateFile(organizationName, repoName, path, commitMessage, rawCsvText)
-    except:
-        print("Couldn't find the source CSV file for " + filenameRoot)
-
-
+        print(response)
 
 # These commented out lines can be uncommented to perform various operations on the repo
 #response = repo.create_file(path, commitMessage, content)
