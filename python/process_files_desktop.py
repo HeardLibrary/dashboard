@@ -63,7 +63,6 @@ def getFileSha(account, repo, filePath):
     # get the data about the file to get its blob SHA
     r = requests.get('https://api.github.com/repos/' + account + '/' + repo + '/contents/' + filePath)
     fileData = r.json()
-    print(fileData)
     try:
         sha = fileData['sha']
     except:
@@ -101,7 +100,9 @@ def readRawCsv(filename):
         return text
 
 def readDict(filename):
-    fileObject = open(filename, 'r', newline='', encoding='utf-8')
+    # had to make this change to get rid of leading byte order mark from first key
+    fileObject = open(filename, 'r', newline='', encoding='utf-8-sig')
+    #fileObject = open(filename, 'r', newline='', encoding='utf-8')
     dictObject = csv.DictReader(fileObject)
     array = []
     for row in dictObject:
