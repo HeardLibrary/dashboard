@@ -12,32 +12,32 @@ import json
 # reference on PyGithub: https://pygithub.readthedocs.io/en/latest/github_objects/Repository.html
 # reference on GitHub API: https://developer.github.com/v3/guides/getting-started/
 
-def loadCredential(filename):
+# value of directory should be either 'home' or 'working'
+def loadCredential(filename, directory):
     cred = ''
     # to change the script to look for the credential in the working directory, change the value of home to empty string
-    home = str(Path.home()) #gets path to home directory; supposed to work for Win and Mac
-    if home == '':
-        credentialPath = filename
-        place = 'working'
-    else:
+    if directory == 'home':
+        home = str(Path.home()) #gets path to home directory; supposed to work for Win and Mac
         credentialPath = home + '/' + filename
-        place = 'home'
+    else:
+        directory = 'working'
+        credentialPath = filename
     try:
         with open(credentialPath, 'rt', encoding='utf-8') as fileObject:
             cred = fileObject.read()
     except:
-        print(filename + ' file not found - is it in your ' + place + ' directory?')
+        print(filename + ' file not found - is it in your ' + directory + ' directory?')
         exit()
     return(cred)
 
 # pass in an empty string for organizationName to use an individual account
 # pass in an empty string for githubUsername to use a token instead of username login
-def loginGetRepo(repoName, githubUsername, organizationName):
+def loginGetRepo(repoName, githubUsername, organizationName, credDirectory):
     if githubUsername == '':
-        token = loadCredential('token.txt')
+        token = loadCredential('token.txt', credDirectory)
         g = Github(login_or_token = token)
     else:
-        pwd = loadCredential('pwd.txt')
+        pwd = loadCredential('pwd.txt', credDirectory)
         g = Github(githubUsername, pwd)
     
     if organizationName == '':
@@ -100,13 +100,14 @@ def readDict(filename):
 githubUsername = ''  # set to empty string if using a token (for 2FA)
 organizationName = 'heardlibrary'  # set to empty string if the repo belongs to the token issuer
 repoName = 'dashboard'
+credDirectory = 'home' # set to 'home' if the credential is in the home directory, otherwise working directory
 filenameRoot = 'collections'
 pathToDirectory = 'data/'
 
 # script starts here
 
 # This is just to produce something that shows the connection with the repo is successful
-repo = loginGetRepo(repoName, githubUsername, organizationName)
+repo = loginGetRepo(repoName, githubUsername, organizationName, credDirectory)
 print(getUserList(repo))
 
 # Read in a CSV
