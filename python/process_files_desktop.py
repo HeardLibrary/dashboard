@@ -30,6 +30,8 @@ def loadCredential(filename):
         exit()
     return(cred)
 
+# pass in an empty string for organizationName to use an individual account
+# pass in an empty string for githubUsername to use a token instead of username login
 def loginGetRepo(repoName, githubUsername, organizationName):
     if githubUsername == '':
         token = loadCredential('token.txt')
@@ -38,17 +40,16 @@ def loginGetRepo(repoName, githubUsername, organizationName):
         pwd = loadCredential('pwd.txt')
         g = Github(githubUsername, pwd)
     
-    # to access a user's repo instead of an organizational one, use the following code:
-    # In this case, the value of organizationName is not used and can have any value.
-    '''
-    user = g.get_user()
-    repo = user.get_repo(repoName)
-    '''
-
-    # this is the method to create an instance of a repo in an organization to which the token
-    # creator has push access
-    organization = g.get_organization(organizationName)
-    repo = organization.get_repo(repoName)
+    if organizationName == '':
+        # this option accesses a user's repo instead of an organizational one
+        # In this case, the value of organizationName is not used.
+        user = g.get_user()
+        repo = user.get_repo(repoName)
+    else:
+        # this option creates an instance of a repo in an organization
+        # to which the token creator has push access
+        organization = g.get_organization(organizationName)
+        repo = organization.get_repo(repoName)
     return(repo)
 
 def getUserList(repo):
@@ -97,7 +98,7 @@ def readDict(filename):
 # ***********************************************************
 # set variable values
 githubUsername = ''  # set to empty string if using a token (for 2FA)
-organizationName = 'heardlibrary'
+organizationName = 'heardlibrary'  # set to empty string if the repo belongs to the token issuer
 repoName = 'dashboard'
 filenameRoot = 'collections'
 pathToDirectory = 'data/'
