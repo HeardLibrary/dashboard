@@ -19,9 +19,10 @@ for sheet in wb:
                 if count != 0:
                     rowDict.update( {headerList[rowPosition] : ''} )
             else:
-                rowList.append(value)
+                valueString = str(value)
+                rowList.append(valueString)
                 if count != 0:
-                    rowDict.update( {headerList[rowPosition] : value} )
+                    rowDict.update( {headerList[rowPosition] : valueString} )
             rowPosition +=1
         sheetListList.append(rowList)
         if count == 0:
