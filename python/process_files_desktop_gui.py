@@ -187,11 +187,11 @@ def updateGitHub():  # This is the function that is invoked when the button is c
                         rowDict.update( {headerList[column] : ''} )
                 else:
                     # need to talk to Tao about whether this is a good idea
-                    valueString = str(value) # turn any numbers into strings
-                    rowList.append(valueString)
+                    #valueString = str(value) # turn any numbers into strings
+                    rowList.append(value)
                     # header row has no dict
                     if rowCount != 0:
-                        rowDict.update( {headerList[column] : valueString} )
+                        rowDict.update( {headerList[column] : value} )
                 column +=1
             sheetListList.append(rowList) # every row gets added for the CSV
             if rowCount == 0:
