@@ -128,7 +128,9 @@ repo = loginGetRepo(repoName, githubUsername, organizationName, credDirectory)
 print(getUserList(repo))
 
 # load the Excel spreadsheet as a workbook object
-wb = load_workbook(filename = excelFilename)
+# see https://stackoverflow.com/questions/28517508/read-excel-cell-value-and-not-the-formula-computing-it-openpyxl
+# for information about reading values rather than formulas
+wb = load_workbook(filename = excelFilename, data_only=True)
 # step through each sheet in the file
 for sheet in wb:
     outFileNameRoot = sheet.title
