@@ -154,8 +154,6 @@ repo = loginGetRepo(repoName, githubUsername, organizationName, credDirectory)
 print(getUserList(repo))
 
 def updateGitHub():  # This is the function that is invoked when the button is clicked
-#    scrollingTextBox.insert(END, myLatte + '\n')
-#    scrollingTextBox.see(END)
 
     # load the Excel spreadsheet as a workbook object
     # see https://stackoverflow.com/questions/28517508/read-excel-cell-value-and-not-the-formula-computing-it-openpyxl
@@ -213,7 +211,7 @@ def updateGitHub():  # This is the function that is invoked when the button is c
         scrollingTextBox.insert(END, str(response) + '\n')
         scrollingTextBox.see(END)
         root.update_idletasks()
-        #print(response)
+        print(response)
 
         # Push CSV file.
         # refer to https://stackoverflow.com/questions/38232838/convert-a-python-list-of-lists-to-a-string
@@ -229,8 +227,8 @@ def updateGitHub():  # This is the function that is invoked when the button is c
         scrollingTextBox.insert(END, str(response) + '\n\n')
         scrollingTextBox.see(END)
         root.update_idletasks()
-        #print(response)
-        #print()
+        print(response)
+        print()
 
     # read the raw binary Excel file
     with open(excelFilename, 'rb') as fileObject:
@@ -241,7 +239,7 @@ def updateGitHub():  # This is the function that is invoked when the button is c
     scrollingTextBox.insert(END, str(response) + '\n')
     scrollingTextBox.see(END)
     root.update_idletasks() 
-    #print(response)
+    print(response)
 
 
 def main():
