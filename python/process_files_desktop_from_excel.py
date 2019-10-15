@@ -119,6 +119,7 @@ organizationName = 'heardlibrary'  # set to empty string if the repo belongs to 
 repoName = 'dashboard'
 credDirectory = 'home' # set to 'home' if the credential is in the home directory, otherwise working directory
 pathToDirectory = 'data/'
+codeDirectory = 'python/'
 excelFilename = 'BytheNumbersWorksheet.xlsx'
 
 # script starts here
@@ -189,7 +190,15 @@ for sheet in wb:
     response = updateFile(organizationName, repoName, path, commitMessage, csvString)
     print(response)
     print()
-    
+
+# read the raw binary Excel file
+with open(excelFilename, 'rb') as fileObject:
+    excelBinary = fileObject.read()
+commitMessage = 'Update Excel file via API'
+path = codeDirectory + excelFilename # assume Excel file is in the same directory as the script
+response = updateFile(organizationName, repoName, path, commitMessage, excelBinary)
+print(response)
+
 # These commented out lines can be uncommented to perform various operations on the repo
 #response = repo.create_file(path, commitMessage, content)
 
