@@ -1,0 +1,74 @@
+[
+  {
+    "Collections": "Blair Performance Archive",
+    "URL": "http://diglib.library.vanderbilt.edu/bpa-browse.pl",
+    "Total Items in Collection": "4,110",
+    "Notes": "diglib/bpa"
+  },
+  {
+    "Collections": "Global Music Archive",
+    "URL": "https://www.globalmusicarchive.org/",
+    "Total Items in Collection": "1,805",
+    "Notes": "Need an updated count; started with 1600 items"
+  },
+  {
+    "Collections": "Helguera Collection of Colombiana",
+    "URL": "http://helguera.library.vanderbilt.edu/",
+    "Total Items in Collection": "3,094",
+    "Notes": ""
+  },
+  {
+    "Collections": "Manual Zapata Olivella",
+    "URL": "http://mzo.library.vanderbilt.edu/",
+    "Total Items in Collection": "1,172",
+    "Notes": "261 correspondence;  911 interview records"
+  },
+  {
+    "Collections": "The Nürnberg Krupp Trial Papers of Judge Hu C. Anderson",
+    "URL": "https://krupp.library.vanderbilt.edu/",
+    "Total Items in Collection": "6,052",
+    "Notes": "trial documents; Jodie"
+  },
+  {
+    "Collections": "Art in Christian Tradition",
+    "URL": "https://lectionary.library.vanderbilt.edu/",
+    "Total Items in Collection": "5,213",
+    "Notes": "visual images, access through Revised Common Lectionary"
+  },
+  {
+    "Collections": "Fine Arts Gallery",
+    "URL": "https://vuart.library.vanderbilt.edu/",
+    "Total Items in Collection": "7,113",
+    "Notes": "a finding aid for the actual objects, but not current with all objects in collection. Database expected to be shut down in 2020. Per Kmason, total objects in collection total 7113 (12/5/19)"
+  },
+  {
+    "Collections": "Revised Common Lectionary",
+    "URL": "https://lectionary.library.vanderbilt.edu//",
+    "Total Items in Collection": 249,
+    "Notes": ""
+  },
+  {
+    "Collections": "History of Medicine Collection",
+    "URL": "https://www.library.vanderbilt.edu/specialcollections/history-of-medicine/",
+    "Total Items in Collection": "2,893",
+    "Notes": "Chris Ryland; History of Cardiac Surgery 42 video interviews; VUMC through time 2842 images; Creating Future Information Age 9 videos;"
+  },
+  {
+    "Collections": "Institutional Respository",
+    "URL": "https://ir.vanderbilt.edu/",
+    "Total Items in Collection": "8,524",
+    "Notes": "From Elisabeth Shook"
+  },
+  {
+    "Collections": "Television News Archive",
+    "URL": "https://tvnews.vanderbilt.edu/",
+    "Total Items in Collection": "1,118,709",
+    "Notes": "from Jim Duran"
+  },
+  {
+    "Collections": "ETD, Electronic Theses & Dissertations",
+    "URL": "https://etd.library.vanderbilt.edu/",
+    "Total Items in Collection": "4,948",
+    "Notes": "Included with ARL counts. 4948 available;  198 withheld; etd_available; etd_withheld (withheld items are not available to the public)"
+  }
+]
