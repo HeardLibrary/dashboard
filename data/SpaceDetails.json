@@ -1,0 +1,79 @@
+[
+ {
+   "Library": "Central Library",
+   "sq. ft": "",
+   "seating": 668,
+   "study rooms": 14,
+   "permanent employees": 19
+ },
+ {
+   "Library": "Divinity Library",
+   "sq. ft": "",
+   "seating": 29,
+   "study rooms": 5,
+   "permanent employees": 7
+ },
+ {
+   "Library": "Annett & Irwin Eskind Family Biomedical Library and Learning Center",
+   "sq. ft": "17,313",
+   "seating": null,
+   "study rooms": 10,
+   "permanent employees": 8
+ },
+ {
+   "Library": "Alyne Queener Massey Law Library",
+   "sq. ft": "43,287",
+   "seating": 366,
+   "study rooms": 9,
+   "permanent employees": 15
+ },
+ {
+   "Library": "Walker Management Library",
+   "sq. ft": "10,633",
+   "seating": 266,
+   "study rooms": 22,
+   "permanent employees": 5
+ },
+ {
+   "Library": "Anne Potter Wilson Music Library",
+   "sq. ft": "7,524",
+   "seating": 91,
+   "study rooms": 1,
+   "permanent employees": 5
+ },
+ {
+   "Library": "Peabody Library",
+   "sq. ft": "26,481",
+   "seating": 289,
+   "study rooms": 10,
+   "permanent employees": 7
+ },
+ {
+   "Library": "Sarah Shannon Stevenson Science & Engineering Library",
+   "sq. ft": "20,589",
+   "seating": 299,
+   "study rooms": 3,
+   "permanent employees": 6
+ },
+ {
+   "Library": "Special Collections and University Archives",
+   "sq. ft": "",
+   "seating": 42,
+   "study rooms": 0,
+   "permanent employees": 9
+ },
+ {
+   "Library": "Off Campus Storage Facilities",
+   "sq. ft": "76,092",
+   "seating": 0,
+   "study rooms": 0,
+   "permanent employees": 4
+ },
+ {
+   "Library": "Fine Arts Gallery",
+   "sq. ft": "",
+   "seating": 0,
+   "study rooms": 0,
+   "permanent employees": 2
+ }
+]
