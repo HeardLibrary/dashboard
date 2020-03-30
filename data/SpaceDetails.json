@@ -9,12 +9,12 @@
  {
    "Library": "Divinity Library",
    "sq. ft": "",
-   "seating": 29,
+   "seating": 198,
    "study rooms": 5,
    "permanent employees": 7
  },
  {
-   "Library": "Annett & Irwin Eskind Family Biomedical Library and Learning Center",
+   "Library": "Annett & Irwin Eskind Biomedical Library",
    "sq. ft": "17,313",
    "seating": null,
    "study rooms": 10,
@@ -23,7 +23,7 @@
  {
    "Library": "Alyne Queener Massey Law Library",
    "sq. ft": "43,287",
-   "seating": 366,
+   "seating": 418,
    "study rooms": 9,
    "permanent employees": 15
  },
@@ -37,7 +37,7 @@
  {
    "Library": "Anne Potter Wilson Music Library",
    "sq. ft": "7,524",
-   "seating": 91,
+   "seating": 86,
    "study rooms": 1,
    "permanent employees": 5
  },
@@ -51,15 +51,15 @@
  {
    "Library": "Sarah Shannon Stevenson Science & Engineering Library",
    "sq. ft": "20,589",
-   "seating": 299,
+   "seating": 326,
    "study rooms": 3,
    "permanent employees": 6
  },
  {
    "Library": "Special Collections and University Archives",
    "sq. ft": "",
-   "seating": 42,
-   "study rooms": 0,
+   "seating": 34,
+   "study rooms": 1,
    "permanent employees": 9
  },
  {
