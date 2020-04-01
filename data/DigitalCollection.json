@@ -30,7 +30,7 @@
     "Notes": "trial documents; Jodie"
   },
   {
-    "Collections": "Art in the Christian Tradition",
+    "Collections": "Art in Christian Tradition",
     "URL": "https://lectionary.library.vanderbilt.edu/",
     "Total Items in Collection": "5,213",
     "Notes": "visual images, access through Revised Common Lectionary"
@@ -71,4 +71,10 @@
     "Total Items in Collection": "4,948",
     "Notes": "Included with ARL counts. 4948 available;  198 withheld; etd_available; etd_withheld (withheld items are not available to the public)"
   }
-]
+    {
+    "Collections": "History of Art Image Repository",
+    "URL": "https://library-artstor-org.proxy.library.vanderbilt.edu/#/collection/37831/",
+    "Total Items in Collection": "104,423",
+    "Notes": "From Cliff"
+   }
+   ] 
