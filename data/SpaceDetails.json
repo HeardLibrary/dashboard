@@ -4,7 +4,7 @@
    "sq. ft": "",
    "seating": 668,
    "study rooms": 14,
-   "permanent employees": 19
+   "permanent employees": 18
  },
  {
    "Library": "Divinity Library",
@@ -60,7 +60,7 @@
    "sq. ft": "",
    "seating": 34,
    "study rooms": 1,
-   "permanent employees": 9
+   "permanent employees": 8
  },
  {
    "Library": "Off Campus Storage Facilities",
@@ -72,7 +72,7 @@
  {
    "Library": "Fine Arts Gallery",
    "sq. ft": "",
-   "seating": 0,
+   "seating": 6,
    "study rooms": 0,
    "permanent employees": 2
  }
