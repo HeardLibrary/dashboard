@@ -2,7 +2,7 @@
  {
    "Collections": "Blair Performance Archive",
    "URL": "http://diglib.library.vanderbilt.edu/bpa-browse.pl",
-   "Total Items in Collection": "4,110",
+   "Total Items in Collection": "4,955",
    "Notes": "diglib/bpa"
  },
  {
@@ -14,14 +14,14 @@
  {
    "Collections": "Helguera Collection of Colombiana",
    "URL": "http://helguera.library.vanderbilt.edu/",
-   "Total Items in Collection": "3,094",
+   "Total Items in Collection": "3,093",
    "Notes": ""
  },
  {
    "Collections": "Manual Zapata Olivella",
    "URL": "http://mzo.library.vanderbilt.edu/",
-   "Total Items in Collection": "1,172",
-   "Notes": "261 correspondence;  911 interview records "
+   "Total Items in Collection": "2,573",
+   "Notes": "261 correspondence "
  },
  {
    "Collections": "The Nürnberg Krupp Trial Papers of Judge Hu C. Anderson",
@@ -32,7 +32,7 @@
  {
    "Collections": "Art in the Christian Tradition",
    "URL": "https://lectionary.library.vanderbilt.edu/",
-   "Total Items in Collection": "5,213",
+   "Total Items in Collection": "6,174",
    "Notes": "visual images, access through Revised Common Lectionary"
  },
  {
@@ -50,31 +50,31 @@
  {
    "Collections": "History of Medicine Collection",
    "URL": "https://www.library.vanderbilt.edu/specialcollections/history-of-medicine/",
-   "Total Items in Collection": "2,893",
+   "Total Items in Collection": "5,510",
    "Notes": "Chris Ryland; History of Cardiac Surgery 42 video interviews; VUMC through time 2842 images; Creating Future Information Age 9 videos; "
  },
  {
    "Collections": "Institutional Respository",
    "URL": "https://ir.vanderbilt.edu/",
-   "Total Items in Collection": "8,524",
+   "Total Items in Collection": "9,687",
    "Notes": "From Elisabeth Shook"
  },
  {
    "Collections": "Television News Archive",
    "URL": "https://tvnews.vanderbilt.edu/",
-   "Total Items in Collection": "1,118,709",
+   "Total Items in Collection": "1,293,716",
    "Notes": "from Jim Duran"
  },
  {
    "Collections": "ETD, Electronic Theses & Dissertations",
    "URL": "https://etd.library.vanderbilt.edu/",
-   "Total Items in Collection": "4,948",
-   "Notes": "Included with ARL counts. 4948 available;  198 withheld; etd_available; etd_withheld (withheld items are not available to the public)"
+   "Total Items in Collection": "5,535",
+   "Notes": "part of IR now"
  },
  {
    "Collections": "History of Art Image Repository",
    "URL": "https://library-artstor-org.proxy.library.vanderbilt.edu/#/collection/37831/",
-   "Total Items in Collection": "104,423",
+   "Total Items in Collection": "106,259",
    "Notes": "from Cliff"
  }
 ]
