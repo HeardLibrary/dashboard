@@ -274,3 +274,15 @@ SAATn58twIM,272,032d Breaking up ggplot functions onto several lines,2.666666667
 sGrO3Geg2SY,273,032e Box and whisker plot,3.566666667
 L1oMH9U4d3o,274,032f Scatterplot with best-fit trendline,4
 10B_N0HtWeA,275,032g Global mapping and cosmetic formatting,4.033333333
+WGlfxXYw6wo,276,VanderBot introduction,1.55
+NZP6lB7l8c8,277,VanderBot creating a bot password,2.416667
+dHBv5IzBsQU,278,VanderBot creating a credentials file,2.78333333333333
+6AlsPEr1mWs,279,VanderBot creating a mapping schema file,4.13333333333333
+ug8ivQkyt4c,280,VanderBot creating the data CSV spreadsheet,2.6
+d9OHt5oDU8w,281,VanderBot downloading the script,1.46666666666667
+EyadhJmA_nM,282,VanderBot writing to the Wikidata API,2.96666666666667
+AG-OljIYkbE,283,VanderBot adding statements and references to existing items,2.6
+Zv9rMzOczv8,284,"VanderBot switching to the ""real"" Wikidata",1.3
+0iJ9z1ea2QU,285,VanderBot setup using a configuration file,4.18333333333333
+ME-gx8UUdzE,286,VanderBot adding data to a sandbox item,3.48333333333333
+OZnv2dPQR6w,287,VanderBot adding multiple values,2.86666666666667
