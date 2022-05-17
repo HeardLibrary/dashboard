@@ -1,1 +1,67 @@
-[{"Notable Digital Collections": "Television News Archive", "Number of Digital Items": 1293716}, {"Notable Digital Collections": "History of Art Image Repository", "Number of Digital Items": 106259}, {"Notable Digital Collections": "Institutional Respository", "Number of Digital Items": 9687}, {"Notable Digital Collections": "Fine Arts Gallery", "Number of Digital Items": 7113}, {"Notable Digital Collections": "Art in the Christian Tradition", "Number of Digital Items": 6174}, {"Notable Digital Collections": "The N\u00fcrnberg Krupp Trial Papers of Judge Hu C. Anderson", "Number of Digital Items": 6052}, {"Notable Digital Collections": "ETD, Electronic Theses & Dissertations", "Number of Digital Items": 5535}, {"Notable Digital Collections": "History of Medicine Collection", "Number of Digital Items": 5510}, {"Notable Digital Collections": "Blair Performance Archive", "Number of Digital Items": 4955}, {"Notable Digital Collections": "Helguera Collection of Colombiana", "Number of Digital Items": 3093}, {"Notable Digital Collections": "Manual Zapata Olivella", "Number of Digital Items": 2573}, {"Notable Digital Collections": "Global Music Archive", "Number of Digital Items": 1805}, {"Notable Digital Collections": "Revised Common Lectionary", "Number of Digital Items": 249}]
+[
+ {
+   "Notable Digital Collections": "Television News Archive",
+   "URL": "https://tvnews.vanderbilt.edu/",
+   "Number of Digital Items": 1293716
+ },
+ {
+   "Notable Digital Collections": "History of Art Image Repository",
+   "URL": "https://library-artstor-org.proxy.library.vanderbilt.edu/#/collection/37831/",
+   "Number of Digital Items": 106259
+ },
+ {
+   "Notable Digital Collections": "Institutional Respository",
+   "URL": "https://ir.vanderbilt.edu/",
+   "Number of Digital Items": 9687
+ },
+ {
+   "Notable Digital Collections": "Fine Arts Gallery",
+   "URL": "https://vuart.library.vanderbilt.edu/",
+   "Number of Digital Items": 7113
+ },
+ {
+   "Notable Digital Collections": "Art in the Christian Tradition",
+   "URL": "https://lectionary.library.vanderbilt.edu/",
+   "Number of Digital Items": 6174
+ },
+ {
+   "Notable Digital Collections": "The Nürnberg Krupp Trial Papers of Judge Hu C. Anderson",
+   "URL": "https://krupp.library.vanderbilt.edu/",
+   "Number of Digital Items": 6052
+ },
+ {
+   "Notable Digital Collections": "ETD, Electronic Theses & Dissertations",
+   "URL": "https://ir.vanderbilt.edu/handle/1803/9599",
+   "Number of Digital Items": 5535
+ },
+ {
+   "Notable Digital Collections": "History of Medicine Collection",
+   "URL": "https://www.library.vanderbilt.edu/specialcollections/history-of-medicine/",
+   "Number of Digital Items": 5510
+ },
+ {
+   "Notable Digital Collections": "Blair Performance Archive",
+   "URL": "http://diglib.library.vanderbilt.edu/bpa-browse.pl",
+   "Number of Digital Items": 4955
+ },
+ {
+   "Notable Digital Collections": "Helguera Collection of Colombiana",
+   "URL": "http://helguera.library.vanderbilt.edu/",
+   "Number of Digital Items": 3093
+ },
+ {
+   "Notable Digital Collections": "Manual Zapata Olivella",
+   "URL": "http://mzo.library.vanderbilt.edu/",
+   "Number of Digital Items": 2573
+ },
+ {
+   "Notable Digital Collections": "Global Music Archive",
+   "URL": "https://www.globalmusicarchive.org/",
+   "Number of Digital Items": 1805
+ },
+ {
+   "Notable Digital Collections": "Revised Common Lectionary",
+   "URL": "https://lectionary.library.vanderbilt.edu/",
+   "Number of Digital Items": 249
+ }
+]
