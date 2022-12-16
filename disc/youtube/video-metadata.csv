@@ -286,3 +286,99 @@ Zv9rMzOczv8,284,"VanderBot switching to the ""real"" Wikidata",1.3
 0iJ9z1ea2QU,285,VanderBot setup using a configuration file,4.18333333333333
 ME-gx8UUdzE,286,VanderBot adding data to a sandbox item,3.48333333333333
 OZnv2dPQR6w,287,VanderBot adding multiple values,2.86666666666667
+xMvEBgpjJt0,288,Introduction to VanderBot (LD4),1
+nvWkaCcEEHA,289,Wikidata Sandbox items - VanderBot (LD4),2.2
+X_uO-OmrJqM,290,Setup prior to preparing data for upload - VanderBot (LD4),1.8
+YStUeWbrzoM,291,What is a metadata description file? - VanderBot (LD4),1.3
+XG_JbEri8ns,292,Simplified configuration file - VanderBot (LD4),5.3
+4DdDzjVx6no,293,Transform config.json to metadata description file - VanderBot (LD4),4.2
+BWQOyd1M0So,294,Adding data to the CSV prior to upload - VanderBot (LD4),5.4
+yKC2evfxfE8,295,Downloading the VanderBot script - VanderBot (LD4),0.9
+9fC3oXvQfqI,296,Writing data to Wikidata - VanderBot (LD4),3.8
+lXgMKHdyY6k,297,Adding a reference - VanderBot (LD4),1.4
+y-FB7rSW2Ks,298,Adding multiple values for a single property - VanderBot (LD4),3.9
+7GypaiRI1Uo,299,Cleaning up the sandbox - VanderBot (LD4),0.7
+iHHQfJKl4OE,300,Set up configuration for faculty data - VanderBot (LD4),6.4
+ophQmKE0Ksc,301,Download and clean existing data - VanderBot (LD4),4.6
+zxIDeFjM0R4,302,Adding statements to existing faculty items - VanderBot (LD4),5.2
+fu68LM5NicM,303,Creating a new faculty item in Wikidata - VanderBot (LD4),4.7
+IauVZFhNSvQ,304,Running a Colab notebook,3.5
+6vpVzmahueY,305,Interrupting a Colab notebook,2.1
+2V5Gq_iYqsY,306,Running a Jupyter notebook and its cells,2.3
+-4MpdmEPPvk,307,Interrupting and shutting down a Jupyter notebook,3.9
+xze913eRtbw,308,Starting RStudio Cloud,3.1
+cSdX52XXob4,309,017a Commits (revised),1.8
+jLZ4LCv21AQ,310,019f Recovering an old file using GitHub,4.1
+JQ7Ow1qKIG0,311,041a Introduction to project management in GitHub,1.2
+mMXYTpXJPrs,312,041b Relationship between issue tracker and projects,2.5
+VOEexPDwCJM,313,041c Creating a GitHub issue,3.2
+dWOFaiI_msE,314,041d Commenting on and linking GitHub issues,1.9
+8YSuJXXEfJs,315,041e @mentions and assigning issues in GitHub,2.2
+KoFBpfSFmuY,316,041f Adding and creating labels for GitHub issues,1.9
+QXeZGY17EOg,317,041g Closing a GitHub issue,2.2
+oKNPd50BHHk,318,041h GitHub task lists (checkboxes),4.2
+tVLOafMAzFg,319,041i GitHub Milestones,3.5
+GJ5N79bm0Wk,320,041j GitHub releases,2
+HYCaIcrLqnE,321,042a Introduction to GitHub Projects,1.5
+xokpLbEe-a8,322,042b Creating a GitHub project,1.8
+oURet69CMis,323,042c Creating cards in a GitHub project,2.2
+a6u6YWvgfR4,324,042d Managing a GitHub project,2.1
+3mJ3-OF8700,325,042e Introduction to branches and merges on GitHub,2
+DfSS7wep2As,326,042f Creating a branch,1.6
+sSdScWKQxcE,327,"042g Creating, reviewing, and merging a pull request",4.9
+7z7iVoi3ylM,328,043a Introduction to GitHub Pages websites,0.6
+rBf6lCmEs4s,329,043b GitHub Pages concepts,2.4
+4wvyMoBhB5c,330,043c Setting up a GitHub Pages website,2.2
+8fR58YbWrv0,331,043d Creating the site homepage,3.4
+E9ifg71jBmA,332,043e Selecting a theme,5.1
+tiM97guNEhA,333,043f Creating and linking static pages,6.6
+HP5H79rAv9k,334,043g Using a remote theme with only content locally,8
+MIaRRKZQifg,335,043h Setting up a remote theme by forking,12.9
+nP6IpdPaKF4,336,043i Controlling the GitHub Pages site URL,4.5
+ -lyS_Zr6CPE,337,038a Introduction to the QT Py RP2040,0.7
+2TQ-4GzfYHQ,338,038b Introduction to CircuitPython,5.4
+vRj1-3Ra0cQ,339,038c The code.py script,2.3
+b2nwldj40Zk,340,038d Modules in CircuitPython,5.4
+hwpct46oq10,341,038e Connecting sensors to the QT Py 2040,4.3
+ne3qsOLonug,342,038f CircuitPython objects,5.5
+uh_ReeKArhI,343,038g Sensor code,7.1
+4JJxd3rsI8E,344,038h Sources of further information,1.4
+gK3b3BL4pfg,345,038i Controlling the read/write mode of the QT Py 2040,4
+39tVlYYgdZ4,346,038j CircuitPython memory limitations,3.8
+SRgRb_6I4lY,347,039a Downloading the CircuitPython library bundle,1
+FWilOIX0rbg,348,039b Installing modules on the board,0.9
+YtIyRzlqgfg,349,039c Installing the mu editor,3
+5xy2fkHqfXw,350,039d Setting the mode on the Mu editor,0.6
+HFLSlryCqxU,351,008a Introduction to pandas,2.8
+Kqjn7FbDwzg,352,008b Review of one-dimensional Python data structures,1.5
+RXFjPbUWH6I,353,008c Introduction to pandas Series,6
+5Wu8HFdz9Gg,354,008d Slicing pandas Series by index,5.1
+M1YFlf6OLpU,355,008e Slicing pandas Series by boolean conditions,3.5
+n6A_g2Dukn0,356,008f Slices vs copies of pandas Series,10.3
+N7L7ezG7vJA,357,008g Making changes to pandas data objects permanent,4.4
+GOGKX7v3Lf0,358,009aa Introduction to pandas DataFrames,0.9
+zOk1LyaQOTo,359,009ab pandas DataFrame structure,6.5
+JVwKj7H8QU0,360,009ac Loading a spreadsheet as a pandas DataFrame,3
+3PNgkdfpeZs,361,009ad Data types in DataFrames and missing values,4.7
+wiTiHR8leAU,362,009ae Setting the row label index of a pandas DataFrame,3.2
+AZMlQlamTLM,363,009af Creating a calculated column in a pandas DataFrame,2.2
+ -TrWy3q20LM,364,009ag Simple column methods for pandas DataFrames,5.2
+4GZmPQj6hz0,365,009ah Dropping and transposing in pandas DataFrames,1.7
+DsvkZfFF5H4,366,009ai Combining pandas DataFrames,4.8
+kw10CWo_oe4,367,009aj Example pandas data wrangling workflow,3.2
+va9KUu1krEY,368,009ba Introduction to extracting and changing pandas DataFrames,1
+41QXKScIKbM,369,009bb Slicing rows in a pandas DataFrame,5.3
+Y2zk-1fhbdU,370,009bc Slicing rectangles and columns in pandas DataFrames,2.4
+FsnYYZSycr4,371,009bd Dropping a range of pandas DataFrame columns or rows,2.9
+8cbDPWhQwlo,372,009be Slicing pandas DataFrame rows by boolean condition,7
+bQulpPz7xdc,373,009bf Changing pandas DataFrame values by boolean condition,2.7
+4x6C2VLtDoU,374,009bg Iterating through rows of a pandas DataFrame,4.2
+yx2HCpE-5Y0,375,010a Introduction to Python plotting,1
+L35ZmvCAWAQ,376,010b Line plots directly from pandas,2.7
+F3HQ62C-zac,377,010c Other pandas plot types,3
+KG7-uGx1YZc,378,010d Matplotlib and pyplot,2.1
+Yz-Tv_29r4M,379,010e pyplot figures and subplots in Matplotlib,4.9
+UvxUzgjIuQg,380,010f Plotting two series in a single subplot using Matplotlib,1.6
+l1gFUpT50Fk,381,010g Scatterplot with best fit curve using Matplotlib,3.6
+L7jjHz41iyY,382,010h Creating subplots programmatically in Matplotlib,3.1
+ZqB3Md6ypHQ,383,010k Creating non-standard plots with Matplotlib,2.8
