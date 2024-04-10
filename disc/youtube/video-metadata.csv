@@ -16,7 +16,7 @@ n7H-EaIYtIk,14,002g Libraries,5.46666666666667
 2mHVzfOqrZU,15,002h Package managers,6.45
 iM6m-l6HgRg,16,003a Programming environment choices,3.51666666666667
 T19e_Idg2WY,17,003b What is Anaconda?,6.5
-HtRoV_S8BD8,18,003c Choices for running Jupyter notebooks,1.53333333333333
+HtRoV_S8BD8,18,003c-new Choices for running Jupyter notebooks,1.53333333333333
 G8P5cg2DuEQ,19,003c Choices for running Jupyter notebooks - obsolete,1.5
  -ijS8WTo8is,20,003d Running your own Jupyter notebook locally,3.93333333333333
 FsMZ40jL4uQ,21,003e Downloading and running a Jupyter notebook from GitHub,1.9
@@ -57,7 +57,7 @@ kQdCeEQTHfg,55,005h Practice script 1,1.2
 rYqBBtQ0xgs,56,005i Practice script 2,3.68333333333333
 hSd3zVXVIRI,57,005j Imported function or method?,1.73333333333333
 Z3-gPTHsYJ0,58,006a Introduction to lists,5.8
-AhkagcbtDw4,59,006a Lists,5.98333333333333
+AhkagcbtDw4,59,006a-new Lists,5.98333333333333
 X1lSuOQbliA,60,006b Lists as output of functions,5.73333333333333
 mGnQCI6RcCk,61,006c Slicing a list,5.11666666666667
 joHgR4vtnuY,62,006c1 Procedural vs. vectorized paradigm,4.16666666666667
@@ -90,43 +90,43 @@ IpPmHfSKveI,88,007h Practice problem 1,1.46666666666667
 n6I6XcY8V1Y,89,007i Practice problem 2,2.46666666666667
 5BiYvt8DVEY,90,007j Practice problem 3,3
 cWndTYPEXE0,91,007k Practice problem 4,7.01666666666667
-tQ1kXMkpKhM,92,008a Introduction to Pandas,2.93333333333333
-Cp-RxkYrCvY,93,008b Creating series,7.51666666666667
-F1ak-vMzaz4,94,008c Referring to parts of series,3.6
-d1Z-SI8uU-M,95,008d Creating a data fram from scratch,3.58333333333333
-hK5Gn5EYfCc,96,008e Referring to parts of a data frame,4.23333333333333
-oJKj58dxyrE,97,008f Review of data frames,1.55
-mTRm-DNfa7I,98,008g Creating a data frame from an Excel file,5.73333333333333
-nB3Plmz3b7E,99,008h Review of data frame attributes and methods,0.783333333333333
-IZeWvmtmvgk,100,008i Summary of functions to read from and write to files,1.11666666666667
-UTazGZrXTc0,101,008j Reading a CSV file from a URL,2.05
-L_1rOWe-wvo,102,008k View vs. copy,2.05
-G_eKb8zsKTA,103,009a Introduction,2.06666666666667
-uXTpu-366QU,104,009b Setting labels,4.75
-yRWjJHXPW0w,105,009c Making changes persist,5.15
-wQwMnWUr-aQ,106,009d Removing rows and columns,4.86666666666667
-tdMpI_FPSlA,107,009e Missing data,5.73333333333333
-Izd4LGJ9hHE,108,009f Sorting rows,2.81666666666667
-q9LxaBz6GZ8,109,009g Slicing rows and columns,6.2
-2bZqQq5TIys,110,009h Selecting rows,8.7
-e0G41_XbuVY,111,009i Transpose,1.83333333333333
-bSwEZPl92ps,112,009j Grouping and group operations,5.21666666666667
-O-7MCGSdJUI,113,009k Unstacking long data frames,6.25
-UVOGbyGrzjM,114,009l Switching between long and wide table forms,6.1
-zmrsmJBMvqw,115,009m Data table joins,3.41666666666667
-b_wEfCdG-hY,116,009n Merges in pandas,12.0166666666667
-G5TrCBgox1A,117,010a - Line graphs from pandas DataFrames,6.95
-4cyWVMOrOng,118,010b Subplots from pandas DataFrames,3.46666666666667
-Q8Zk_8yXQRk,119,010c Other plot types from pandas DataFrames,1.91666666666667
-QGxAEw-xWxY,120,010d Scatterplot from a pandas DataFrame,0.9
-Qv-4E8cpnE8,121,010e Pie charts from pandas a DataFrame,7.9
-nKIGnDH5kZs,122,010f Bar chart from a pandas DataFrame,2.06666666666667
-xl4N5qjiZkw,123,010g What is pyplot?,1.76666666666667
-mr8URVnVf5w,124,010h Pyplot plot function,5.75
-4Xt2MHlh7qI,125,010i Pyplot figures and subplots,7.56666666666667
-UYjzEOzNpgM,126,010j Plotting in a single Pyplot subplot,4.51666666666667
-VzowOXwzCVg,127,010k Creating non-standard plots with Pyplot,3.31666666666667
-Uic3-7uFgYg,128,010l Creating a stacked bar chart with Pyplot,16.7833333333333
+tQ1kXMkpKhM,92,008a Introduction to Pandas (old),2.93333333333333
+Cp-RxkYrCvY,93,008b Creating series (old),7.51666666666667
+F1ak-vMzaz4,94,008c Referring to parts of series (old),3.6
+d1Z-SI8uU-M,95,008d Creating a data fram from scratch (old),3.58333333333333
+hK5Gn5EYfCc,96,008e Referring to parts of a data frame (old),4.23333333333333
+oJKj58dxyrE,97,008f Review of data frames (old),1.55
+mTRm-DNfa7I,98,008g Creating a data frame from an Excel file (old),5.73333333333333
+nB3Plmz3b7E,99,008h Review of data frame attributes and methods (old),0.783333333333333
+IZeWvmtmvgk,100,008i Summary of functions to read from and write to files (old),1.11666666666667
+UTazGZrXTc0,101,008j Reading a CSV file from a URL (old),2.05
+L_1rOWe-wvo,102,008k View vs. copy (old),2.05
+G_eKb8zsKTA,103,009a Introduction (old),2.06666666666667
+uXTpu-366QU,104,009b Setting labels (old),4.75
+yRWjJHXPW0w,105,009c Making changes persist (old),5.15
+wQwMnWUr-aQ,106,009d Removing rows and columns (old),4.86666666666667
+tdMpI_FPSlA,107,009e Missing data (old),5.73333333333333
+Izd4LGJ9hHE,108,009f Sorting rows (old),2.81666666666667
+q9LxaBz6GZ8,109,009g Slicing rows and columns (old),6.2
+2bZqQq5TIys,110,009h Selecting rows (old),8.7
+e0G41_XbuVY,111,009i Transpose (old),1.83333333333333
+bSwEZPl92ps,112,009j Grouping and group operations (old),5.21666666666667
+O-7MCGSdJUI,113,009k Unstacking long data frames (old),6.25
+UVOGbyGrzjM,114,009l Switching between long and wide table forms (old),6.1
+zmrsmJBMvqw,115,009m Data table joins (old),3.41666666666667
+b_wEfCdG-hY,116,009n Merges in pandas (old),12.0166666666667
+G5TrCBgox1A,117,010a - Line graphs from pandas DataFrames (old),6.95
+4cyWVMOrOng,118,010b Subplots from pandas DataFrames (old),3.46666666666667
+Q8Zk_8yXQRk,119,010c Other plot types from pandas DataFrames (old),1.91666666666667
+QGxAEw-xWxY,120,010d Scatterplot from a pandas DataFrame (old),0.9
+Qv-4E8cpnE8,121,010e Pie charts from pandas a DataFrame (old),7.9
+nKIGnDH5kZs,122,010f Bar chart from a pandas DataFrame (old),2.06666666666667
+xl4N5qjiZkw,123,010g What is pyplot? (old),1.76666666666667
+mr8URVnVf5w,124,010h Pyplot plot function (old),5.75
+4Xt2MHlh7qI,125,010i Pyplot figures and subplots (old),7.56666666666667
+UYjzEOzNpgM,126,010j Plotting in a single Pyplot subplot (old),4.51666666666667
+VzowOXwzCVg,127,010k Creating non-standard plots with Pyplot (old),3.31666666666667
+Uic3-7uFgYg,128,010l Creating a stacked bar chart with Pyplot (old),16.7833333333333
 Ll_x2FKlVyE,129,011a R objects,9.66666666666667
 2QcGw6OS6VQ,130,011b Function review,4.11666666666667
 otIwmZdviKc,131,011c Loading an R script,4.91666666666667
@@ -307,8 +307,8 @@ IauVZFhNSvQ,304,Running a Colab notebook,3.48333333333333
 2V5Gq_iYqsY,306,Running a Jupyter notebook and its cells,2.26666666666667
 -4MpdmEPPvk,307,Interrupting and shutting down a Jupyter notebook,3.85
 xze913eRtbw,308,Starting RStudio Cloud,3.13333333333333
-cSdX52XXob4,309,017a Commits (revised),1.76666666666667
-jLZ4LCv21AQ,310,019f Recovering an old file using GitHub,4.11666666666667
+cSdX52XXob4,309,017a-revised-commits Commits (revised),1.76666666666667
+jLZ4LCv21AQ,310,019f_recover_old_file Recovering an old file using GitHub,4.11666666666667
 JQ7Ow1qKIG0,311,041a Introduction to project management in GitHub,1.16666666666667
 mMXYTpXJPrs,312,041b Relationship between issue tracker and projects,2.53333333333333
 VOEexPDwCJM,313,041c Creating a GitHub issue,3.2
@@ -382,3 +382,5 @@ UvxUzgjIuQg,380,010f Plotting two series in a single subplot using Matplotlib,1.
 l1gFUpT50Fk,381,010g Scatterplot with best fit curve using Matplotlib,3.63333333333333
 L7jjHz41iyY,382,010h Creating subplots programmatically in Matplotlib,3.1
 ZqB3Md6ypHQ,383,010k Creating non-standard plots with Matplotlib,2.8
+PcNWg4LvNS4,384,040_rocket_composite_accel,0.98
+b0dXk6lvcQ8,385,040_rocket_composite_rotation,0.98
